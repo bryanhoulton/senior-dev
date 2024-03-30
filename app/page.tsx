@@ -1,14 +1,11 @@
 "use client";
 
-import {
-  useEffect,
-  useState,
-} from 'react';
+import { useEffect, useState } from "react";
 
-import { Star } from 'lucide-react';
-import Image from 'next/image';
+import { Star } from "lucide-react";
+import Image from "next/image";
 
-import guy from '../public/guy.webp';
+import guy from "../public/guy.webp";
 
 export default function Home() {
   const [starCount, setStarcount] = useState(0);
@@ -31,6 +28,9 @@ export default function Home() {
           <p className="text-lg">
             Rude. Pedantic. Unhelpful.
             <br></br>How he gets paid so much is a mystery.
+            <br></br>
+            <br></br>
+            Will periodically comment on your PRs.
           </p>
 
           <div className="flex gap-4">
