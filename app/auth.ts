@@ -2,7 +2,8 @@ import { createAppAuth } from '@octokit/auth-app';
 
 const auth = createAppAuth({
   appId: process.env.GITHUB_APP_ID || 0,
-  privateKey: process.env.GITHUB_APP_PRIVATE_KEY || "",
+  privateKey:
+    JSON.parse(process.env.GITHUB_APP_PRIVATE_KEY || "{}").value || "",
   clientId: process.env.GITHUB_APP_CLIENT_ID,
   clientSecret: process.env.GITHUB_APP_CLIENT_SECRET,
 });
