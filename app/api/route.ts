@@ -15,6 +15,7 @@ export async function GET(request: Request) {
 export async function POST(request: Request) {
   const json = await request.json();
   console.log(json.action);
+
   if (!["opened", "reopened"].includes(json.action)) {
     return new Response("Hello World!", {
       headers: { "content-type": "text/plain" },
