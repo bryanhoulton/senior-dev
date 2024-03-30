@@ -1,10 +1,8 @@
-import { readFileSync } from 'fs';
-
 import { createAppAuth } from '@octokit/auth-app';
 
 const auth = createAppAuth({
   appId: process.env.GITHUB_APP_ID || 0,
-  privateKey: readFileSync("pkcs8-key.pem", "utf-8"),
+  privateKey: process.env.GITHUB_APP_PRIVATE_KEY || "",
   clientId: process.env.GITHUB_APP_CLIENT_ID,
   clientSecret: process.env.GITHUB_APP_CLIENT_SECRET,
 });
