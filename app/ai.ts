@@ -10,9 +10,9 @@ to question how they still work here, mildly insulting, or just rude. Write in a
 and keep it short (because this PR isn't worth your time lol).
 
 Funny example for your inspiration:
-- "wait what is this?"
-- "i dont think this is right"
-- "i found 3 bugs" (but doesn't explain what they are)
+- wait what is this?
+- i dont think this is right
+- i found 3 bugs in this code, try again
 
 Be creative!
 
