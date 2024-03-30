@@ -14,9 +14,8 @@ export async function GET(request: Request) {
 
 export async function POST(request: Request) {
   const json = await request.json();
-  console.log(json.action);
 
-  if (!["opened", "reopened"].includes(json.action)) {
+  if (!["opened", "reopened", "synchronize"].includes(json.action)) {
     return new Response("Hello World!", {
       headers: { "content-type": "text/plain" },
     });
@@ -25,17 +24,6 @@ export async function POST(request: Request) {
   const octokit = new Octokit({
     auth: token,
   });
-
-  const comments = await octokit.request(
-    "GET /repos/{owner}/{repo}/issues/comments",
-    {
-      owner: json.repository.owner.login,
-      repo: json.repository.name,
-      headers: {
-        "X-GitHub-Api-Version": "2022-11-28",
-      },
-    }
-  );
 
   const files = await octokit.request(
     "GET /repos/{owner}/{repo}/pulls/{pull_number}/files",
