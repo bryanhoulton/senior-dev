@@ -1,6 +1,10 @@
 on:
   pull_request:
     types: [opened, reopened]
+permissions:
+  contents: "read"
+  id-token: "write"
+  issues: "write"
 jobs:
   comment:
     runs-on: ubuntu-latest
