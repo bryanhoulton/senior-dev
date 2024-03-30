@@ -21,13 +21,6 @@ export async function POST(request: Request) {
     });
   }
 
-  // 80% chance of not responding
-  if (Math.random() > 0.5) {
-    return new Response("Hello World!", {
-      headers: { "content-type": "text/plain" },
-    });
-  }
-
   const token = await getInstallationAccessToken(json.installation.id);
   const octokit = new Octokit({
     auth: token,
