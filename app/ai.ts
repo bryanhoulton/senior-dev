@@ -29,7 +29,7 @@ should be about how the code is terrible, you don't understand it, how the desig
 is wrong, etc.
 `;
 
-const PROMPTS = [PROMPT_2, PROMPT_1, PROMPT_3];
+const PROMPTS = [PROMPT_2, PROMPT_2, PROMPT_2, PROMPT_2, PROMPT_1, PROMPT_3];
 
 const PROMPT_WRAPPER = (prompt: string, files: string) => `
 ${prompt}
