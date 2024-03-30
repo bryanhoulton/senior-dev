@@ -1,7 +1,7 @@
-import { Octokit } from '@octokit/core';
+import { Octokit } from "@octokit/core";
 
-import { prompt } from '../ai';
-import { getInstallationAccessToken } from '../auth';
+import { prompt } from "../ai";
+import { getInstallationAccessToken } from "../auth";
 
 export const dynamic = "force-dynamic"; // defaults to auto
 export async function GET(request: Request) {
@@ -22,11 +22,11 @@ export async function POST(request: Request) {
   }
 
   // 80% chance of not responding
-  //   if (Math.random() > 0.2) {
-  //     return new Response("Hello World!", {
-  //       headers: { "content-type": "text/plain" },
-  //     });
-  //   }
+  if (Math.random() > 0.5) {
+    return new Response("Hello World!", {
+      headers: { "content-type": "text/plain" },
+    });
+  }
 
   const token = await getInstallationAccessToken(json.installation.id);
   const octokit = new Octokit({
