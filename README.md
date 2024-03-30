@@ -1,3 +1,5 @@
+https://www.sillyseniordev.com/
+
 A Github bot that will occasionally insult your PRs, just like a real senior engineer.
 
 Rude. Pedantic. Unhelpful.
